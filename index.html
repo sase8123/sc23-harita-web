@@ -993,7 +993,30 @@ h3 {
 }
 
 .roadmap strong {
+  display: block;
   font-size: 22px;
+}
+
+.download-note {
+  display: block;
+  margin-top: 12px;
+  padding-right: 6px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.download-note::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: var(--gold-2);
+  box-shadow: 0 0 14px rgba(214, 178, 61, 0.5);
+  vertical-align: 1px;
 }
 
 .roadmap em {
@@ -1065,30 +1088,6 @@ h3 {
   font-family: Consolas, "Courier New", monospace;
   font-size: 12px;
   line-height: 1.35;
-}
-
-.compact-security {
-  display: block;
-  max-width: 1180px;
-  padding: 14px 18px;
-  color: var(--muted);
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.compact-security span {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.compact-security span::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--gold-2);
-  box-shadow: 0 0 18px rgba(214, 178, 61, 0.55);
 }
 
 .contact-section {
@@ -1722,19 +1721,18 @@ h3 {
           <h2>Yeni modüller ve başka programlar için ürün vitrini.</h2>
         </div>
         <div class="roadmap">
-          <a class="roadmap-card active" href="https://llarwagbefhnrpnmrvfu.supabase.co/storage/v1/object/public/sc23-downloads/SC23_Harita.exe"><span>01</span><strong>SC23 Harita CAD eklentisi</strong><em>İndir</em></a>
+          <a
+            class="roadmap-card active"
+            href="https://llarwagbefhnrpnmrvfu.supabase.co/storage/v1/object/public/sc23-downloads/SC23_Harita.exe"
+            data-publisher="Salih CENGİZ"
+            data-version="1.0.0 Müşteri Sürümü"
+            data-file="SC23_Harita.exe"
+            data-sha256="E92DE52AE3DBFD6EB58F6465659E84980F44BC16BC6BA4BBB59154DEA0595FD4"
+          >
+            <span>01</span><strong>SC23 Harita CAD eklentisi</strong><small class="download-note">Resmi kurulum dosyası güvenli bağlantı üzerinden sunulur.</small><em>İndir</em>
+          </a>
           <div class="roadmap-card"><span>02</span><strong>Yeni sürümler</strong><p>Yakında.</p><em>Yakında</em></div>
           <div class="roadmap-card"><span>03</span><strong>Yeni programlar</strong><p>Yakında.</p><em>Yakında</em></div>
-        </div>
-        <div
-          class="download-security compact-security"
-          aria-label="Güvenli indirme bilgisi"
-          data-publisher="Salih CENGİZ"
-          data-version="1.0.0 Müşteri Sürümü"
-          data-file="SC23_Harita.exe"
-          data-sha256="E92DE52AE3DBFD6EB58F6465659E84980F44BC16BC6BA4BBB59154DEA0595FD4"
-        >
-          <span>Resmi kurulum dosyası güvenli bağlantı üzerinden sunulur.</span>
         </div>
       </section>
 
