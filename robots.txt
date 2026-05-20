@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sc23harita.pages.dev/sitemap.xml
+Sitemap: https://www.sc23harita.com/sitemap.xml
