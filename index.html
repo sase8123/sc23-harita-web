@@ -1646,6 +1646,38 @@ h3 {
 
     <script>const ticker = document.querySelector("[data-ticker]");
 
+const analyticsConfig = {
+  supabaseUrl: "https://llarwagbefhnrpnmrvfu.supabase.co",
+  publishableKey: "sb_publishable_JnYet_YLK1WM4MJaQGTN3A_KVLhdTWf"
+};
+
+const recordSiteEvent = (eventType) => {
+  if (!analyticsConfig.supabaseUrl || !analyticsConfig.publishableKey) {
+    return;
+  }
+
+  const endpoint = `${analyticsConfig.supabaseUrl}/rest/v1/site_events`;
+  const payload = {
+    event_type: eventType,
+    page: window.location.href,
+    user_agent: navigator.userAgent
+  };
+
+  fetch(endpoint, {
+    method: "POST",
+    headers: {
+      apikey: analyticsConfig.publishableKey,
+      Authorization: `Bearer ${analyticsConfig.publishableKey}`,
+      "Content-Type": "application/json",
+      Prefer: "return=minimal"
+    },
+    body: JSON.stringify(payload),
+    keepalive: true
+  }).catch(() => {});
+};
+
+recordSiteEvent("page_view");
+
 if (ticker) {
   ticker.innerHTML += ticker.innerHTML;
 }
@@ -1692,6 +1724,12 @@ document.querySelectorAll(".command-chip").forEach((chip) => {
       ],
       { duration: 260, easing: "ease-out" }
     );
+  });
+});
+
+document.querySelectorAll('a[href*="SC23_Harita.exe"]').forEach((link) => {
+  link.addEventListener("click", () => {
+    recordSiteEvent("download_click");
   });
 });
 </script>
