@@ -1,0 +1,256 @@
+﻿<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SC23 Harita | CAD, AutoCAD, Civil 3D ve Netcad Harita Eklentisi</title>
+    <meta name="description" content="SC23 Harita; Salih CENGİZ tarafından geliştirilen CAD tabanlı harita eklentisidir. Topoğrafya, enkesit, yüzey, güzergah, hacim, aplikasyon, alım, ölçüm, kübaj ve Google Earth iş akışlarını ribbon menüsünde toplar.">
+    <meta name="keywords" content="SC23 Harita, Salih CENGİZ, AutoCAD harita eklentisi, CAD harita eklentisi, Civil 3D, Netcad, topoğrafya, enkesit, yüzey, yüzey oluşturma, Google Earth, güzergah, hacim, aplikasyon, alım, ölçüm, inşaat harita, kübaj, ribbon menüsü, harita işleri, geomatics engineering, mühendislik">
+    <meta name="author" content="Salih CENGİZ">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://sc23harita.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:title" content="SC23 Harita | CAD Harita Eklentisi">
+    <meta property="og:description" content="Topoğrafya, enkesit, yüzey, güzergah, hacim, aplikasyon, alım, ölçüm ve Google Earth işlemleri için profesyonel CAD ribbon eklentisi.">
+    <meta property="og:url" content="https://sc23harita.com/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="SC23 Harita | CAD Harita Eklentisi">
+    <meta name="twitter:description" content="Salih CENGİZ tarafından geliştirilen SC23 Harita; CAD, AutoCAD, Civil 3D ve Netcad iş akışlarına yönelik harita ve inşaat yardımcı eklentisidir.">
+    <meta name="theme-color" content="#d6b23d">
+    <meta name="apple-mobile-web-app-title" content="SC23 Harita">
+    <meta name="application-name" content="SC23 Harita">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" href="assets/favicon.ico?v=20260520-2">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png?v=20260520-2">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=20260520-2">
+    <script>
+      (() => {
+        const icon192 = "assets/icon-192.png?v=20260520-2";
+        const icon512 = "assets/icon-512.png?v=20260520-2";
+        const manifest = {
+          name: "SC23 Harita | Salih CENGİZ",
+          short_name: "SC23 Harita",
+          description: "SC23 Harita CAD eklentisi resmi tanitim sitesi.",
+          start_url: "./",
+          scope: "./",
+          display: "standalone",
+          background_color: "#071110",
+          theme_color: "#d6b23d",
+          icons: [
+            { src: icon192, sizes: "192x192", type: "image/png", purpose: "any maskable" },
+            { src: icon512, sizes: "512x512", type: "image/png", purpose: "any maskable" }
+          ]
+        };
+        const link = document.createElement("link");
+        link.rel = "manifest";
+        link.href = URL.createObjectURL(new Blob([JSON.stringify(manifest)], { type: "application/manifest+json" }));
+        document.head.appendChild(link);
+      })();
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "SC23 Harita",
+        "applicationCategory": "EngineeringApplication",
+        "operatingSystem": "Windows",
+        "url": "https://sc23harita.com/",
+        "downloadUrl": "https://llarwagbefhnrpnmrvfu.supabase.co/storage/v1/object/public/sc23-downloads/SC23_Harita.rar",
+        "softwareVersion": "1.0.0",
+        "author": {
+          "@type": "Person",
+          "name": "Salih CENGİZ",
+          "jobTitle": "Harita ve Kadastro Teknikeri",
+          "email": "Salihcengiz23@yandex.com"
+        },
+        "description": "CAD tabanlı harita, topoğrafya, enkesit, yüzey, güzergah, hacim, aplikasyon, alım, ölçüm, kübaj ve Google Earth işlemleri için ribbon menüsü eklentisi.",
+        "keywords": "SC23 Harita, AutoCAD, CAD, Civil 3D, Netcad, topoğrafya, enkesit, yüzey, güzergah, hacim, aplikasyon, alım, ölçüm, kübaj, Google Earth, ribbon menüsü, harita işleri, inşaat harita"
+      }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Ana gezinme">
+      <a class="brand" href="#anasayfa" aria-label="SC23 Harita anasayfa">
+        <img src="assets/sc23-icon.png" alt="SC23 Harita logosu">
+        <span>
+          <strong>SC23 Harita</strong>
+          <small>Salih CENGİZ</small>
+        </span>
+      </a>
+      <a class="nav-action" href="mailto:Salihcengiz23@yandex.com">İletişim</a>
+    </header>
+
+    <main id="anasayfa">
+      <section class="ticker-section" aria-label="SC23 komutlari">
+        <div class="ticker-track">
+          <div class="ticker-row" data-ticker>
+            <span><img src="assets/icons/SC23_POINT_TOOLS.png" alt="">Nokta Araçları</span>
+            <span><img src="assets/icons/SC23_QUERY_EDIT.png" alt="">Sorgu Düzenleme</span>
+            <span><img src="assets/icons/TOPOGRAFYA_GUZERGAH_CLEAN.png" alt="">Güzergah</span>
+            <span><img src="assets/icons/TOPOGRAFYA_YUZEY_CLEAN.png" alt="">Yüzey</span>
+            <span><img src="assets/icons/TOPOGRAFYA_ENKESIT_CLEAN.png" alt="">Enkesit</span>
+            <span><img src="assets/icons/TOPOGRAFYA_PROFIL.png" alt="">Profil</span>
+            <span><img src="assets/icons/TOPOGRAFYA_KOT_YONETIMI.png" alt="">Kot Yönetimi</span>
+            <span><img src="assets/icons/DONUSUM.png" alt="">Projeksiyon</span>
+            <span><img src="assets/icons/GLOBE.png" alt="">Google Earth</span>
+            <span><img src="assets/icons/SCREEN_MANAGER.png" alt="">Araçlar</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <div class="hero-copy glass-panel">
+          <p class="eyebrow">CAD icin harita ve kadastro komut paneli</p>
+          <h1 id="hero-title">SC23 Harita</h1>
+          <p class="lead">
+              Saha ölçülerinden CAD çizim üretimine kadar tekrar eden harita ve inşaat işlemlerini tek panelde düzenleyen profesyonel CAD eklentisi.
+            </p>
+            <div class="hero-actions">
+              <a class="primary-button" href="#program">
+                <span class="button-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M4 6.5h16M4 12h10M4 17.5h16"/><path d="m16 10 3 2-3 2z"/></svg>
+                </span>
+                Programı incele
+              </a>
+            </div>
+          </div>
+          <figure class="hero-photo" aria-label="Harita ve inşaat saha görselleri">
+            <img class="hero-slide active" src="assets/survey-slide-1.jpg" alt="Total station ve GNSS ile saha ölçümü">
+            <img class="hero-slide" src="assets/survey-slide-2.jpg" alt="İnşaat sahasında harita ölçümü">
+            <img class="hero-slide" src="assets/survey-slide-3.jpg" alt="Yol ve arazi geliştirme sahasında ölçüm">
+          </figure>
+          <aside class="hero-panel" aria-label="SC23 Harita ozeti">
+            <img src="assets/sc23-icon.png" alt="SC23 Harita uygulama ikonu">
+            <div>
+              <span>1.0.0 Müşteri Sürümü</span>
+              <strong>CAD üst şeridine yerleşir</strong>
+            </div>
+            <ul>
+              <li>CAD üst şeridinde düzenli komut deneyimi</li>
+              <li>Yeni sürüm ve modüller için genişletilebilir altyapı</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section id="program" class="section program-section">
+        <div class="section-heading feature-title">
+          <p class="eyebrow">Program tanıtımı</p>
+          <h2>Harita ve çizim işlerini tek merkezden yönetir.</h2>
+          <p>
+            SC23 Harita, CAD içinde üst şerit sekmesi olarak çalışır. Sık kullanılan LISP komutlarını düzenli, erişilebilir ve müşteri sürümüne uygun bir panelde toplar.
+          </p>
+        </div>
+        <div class="feature-grid main-button-grid">
+          <article class="feature-card main-button-card">
+            <span class="panel-label">SC23 Harita</span><span class="feature-icon image-icon"><img src="assets/icons/SC23_POINT_TOOLS.png" alt=""></span><h3>Nokta Araçları</h3><p>Nokta ve koordinat odaklı temel üretim komutları.</p>
+            <div class="panel-commands"><span><img src="assets/icons/PLN.png" alt="">PLN</span><span><img src="assets/icons/NO.png" alt="">NO</span><span><img src="assets/icons/XYZ2.png" alt="">XYZ2</span><span><img src="assets/icons/XYZT1.png" alt="">XYZT1</span><span><img src="assets/icons/ORTA.png" alt="">ORTA</span><span><img src="assets/icons/ER.png" alt="">ER</span></div>
+          </article>
+          <article class="feature-card main-button-card">
+            <span class="panel-label">SC23 Harita</span><span class="feature-icon image-icon"><img src="assets/icons/SC23_QUERY_EDIT.png" alt=""></span><h3>Sorgu Düzenleme</h3><p>Çizim sorgulama, düzenleme ve hesap kontrol alanı.</p>
+            <div class="panel-commands"><span><img src="assets/icons/OO.png" alt="">OO</span><span><img src="assets/icons/NOKDIM.png" alt="">NOKDIM</span><span><img src="assets/icons/KY.png" alt="">KY</span><span><img src="assets/icons/TOP.png" alt="">TOP</span><span><img src="assets/icons/SAC.png" alt="">SAC</span><span><img src="assets/icons/UY.png" alt="">LYAZ</span><span><img src="assets/icons/YTOP.png" alt="">YTOP</span><span><img src="assets/icons/ORTALAMA_KOT.png" alt="">Ortalama Kot</span><span><img src="assets/icons/PLAC.png" alt="">PLAC</span><span><img src="assets/icons/M2.png" alt="">M2</span></div>
+          </article>
+          <article class="feature-card main-button-card">
+            <span class="panel-label">Topoğrafya</span><span class="feature-icon image-icon"><img src="assets/icons/TOPOGRAFYA_GUZERGAH_CLEAN.png" alt=""></span><h3>Güzergah</h3><p>Yatay ve düşey güzergah üretim akışları.</p>
+            <div class="panel-commands"><span><img src="assets/icons/TOPOGRAFYA_GUZERGAH_OLUSTUR.png" alt="">Yatay Güzergah</span><span><img src="assets/icons/TOPOGRAFYA_GUZERGAH_DUSEY.png" alt="">Düşey Güzergah</span><span><img src="assets/icons/TOPOGRAFYA_GUZERGAH_PARAMETRE.png" alt="">Yol Parametreleri</span><span><img src="assets/icons/TOPOGRAFYA_PROFIL_OLUSTUR.png" alt="">Düşey Profil Gör</span><span><img src="assets/icons/TOPOGRAFYA_GUZERGAH_LANDXML.png" alt="">LandXML Aktar</span><span><img src="assets/icons/TOPOGRAFYA_GUZERGAH_CIHAZ_XML.png" alt="">Cihaz LandXML</span><span><img src="assets/icons/TOPOGRAFYA_GUZERGAH_EXPORT.png" alt="">Export</span><span><img src="assets/icons/TOPOGRAFYA_GUZERGAH_IMPORT.png" alt="">Import</span></div>
+          </article>
+          <article class="feature-card main-button-card">
+            <span class="panel-label">Topoğrafya</span><span class="feature-icon image-icon"><img src="assets/icons/TOPOGRAFYA_YUZEY_CLEAN.png" alt=""></span><h3>Yüzey</h3><p>Yüzey oluşturma, düzenleme ve kontrol işlemleri.</p>
+            <div class="panel-commands"><span><img src="assets/icons/TOPOGRAFYA_SURFACE_TRIANGULATE.png" alt="">Üçgenleme</span><span><img src="assets/icons/TOPOGRAFYA_SURFACE_SWAP.png" alt="">Üçgen Döndür</span><span><img src="assets/icons/TOPOGRAFYA_SURFACE_DELETE.png" alt="">Üçgen Sil</span><span><img src="assets/icons/SC23_SURFACE_REPAIR.png" alt="">Model Düzelt</span><span><img src="assets/icons/SC23_SURFACE_EDIT.png" alt="">Model Düzenle</span><span><img src="assets/icons/SC23_SURFACE_ELEVATION.png" alt="">Kot Değiştir</span><span><img src="assets/icons/TOPOGRAFYA_SURFACE_CONTOUR.png" alt="">Eğri Geçir</span><span><img src="assets/icons/TOPOGRAFYA_SURFACE_SMOOTH.png" alt="">Eğri Düzelt</span><span><img src="assets/icons/TOPOGRAFYA_SURFACE_LABEL.png" alt="">Eğrilere Kot Yaz</span><span><img src="assets/icons/TOPOGRAFYA_SURFACE_LANDXML.png" alt="">LandXML Aktar</span><span><img src="assets/icons/TOPOGRAFYA_SURFACE_EXPORT.png" alt="">Export</span><span><img src="assets/icons/TOPOGRAFYA_SURFACE_IMPORT.png" alt="">Import</span></div>
+          </article>
+          <article class="feature-card main-button-card">
+            <span class="panel-label">Topoğrafya</span><span class="feature-icon image-icon"><img src="assets/icons/TOPOGRAFYA_ENKESIT_CLEAN.png" alt=""></span><h3>Enkesit</h3><p>Enkesit üretim, çizim ve kontrol araçları.</p>
+            <div class="panel-commands"><span><img src="assets/icons/TOPOGRAFYA_ENKESIT_CIZ.png" alt="">Enkesit Üret</span><span><img src="assets/icons/TOPOGRAFYA_ENKESIT_IMPORT.png" alt="">Enkesit Çiz</span><span><img src="assets/icons/TOPOGRAFYA_KESIT_IZLE.png" alt="">Kesit İzle</span><span><img src="assets/icons/TOPOGRAFYA_ENKESIT_EXPORT.png" alt="">Export</span><span><img src="assets/icons/TOPOGRAFYA_ENKESIT_IMPORT.png" alt="">Import</span></div>
+          </article>
+          <article class="feature-card main-button-card">
+            <span class="panel-label">Topoğrafya</span><span class="feature-icon image-icon"><img src="assets/icons/TOPOGRAFYA_PROFIL.png" alt=""></span><h3>Profil</h3><p>Profil oluşturma ve proje okuma akışı.</p>
+            <div class="panel-commands"><span><img src="assets/icons/TOPOGRAFYA_PROFIL_OLUSTUR.png" alt="">Profil Oluştur</span></div>
+          </article>
+          <article class="feature-card main-button-card">
+            <span class="panel-label">Topoğrafya</span><span class="feature-icon image-icon"><img src="assets/icons/TOPOGRAFYA_KOT_YONETIMI.png" alt=""></span><h3>Kot Yönetimi</h3><p>Kot alma, düzenleme, yazdırma ve kontrol süreci.</p>
+            <div class="panel-commands"><span><img src="assets/icons/KOT_HIZLI.png" alt="">Hızlı Kot</span><span><img src="assets/icons/KOT_YUZEYDEN_AL.png" alt="">Yüzeyden Kot Al</span><span><img src="assets/icons/KOT_YAZIDAN_AL.png" alt="">Yazıdan Kot Al</span><span><img src="assets/icons/KOT_PL_KOTLANDIR.png" alt="">Kapalı PL Kotlandır</span><span><img src="assets/icons/KOT_VERTEX_AL.png" alt="">Vertex Kot Al</span><span><img src="assets/icons/KOT_EGIM_VER.png" alt="">Eğim Ver</span><span><img src="assets/icons/KOT_SABIT.png" alt="">Sabit Kota Al</span><span><img src="assets/icons/KOT_NOKTA_DUZENLE.png" alt="">Kot Noktası Ekle/Sil</span><span><img src="assets/icons/KOT_YAZDIR.png" alt="">Kot Yazdır</span><span><img src="assets/icons/KOT_FARKI.png" alt="">Kot Farkı Uygula</span><span><img src="assets/icons/KOT_KONTROL.png" alt="">Kot Kontrol</span><span><img src="assets/icons/KOT_KONTROL_DETAY.png" alt="">Kot Kontrol Detaylı</span></div>
+          </article>
+          <article class="feature-card main-button-card">
+            <span class="panel-label">Topoğrafya</span><span class="feature-icon image-icon"><img src="assets/icons/TOPOGRAFYA_HACIM_CLEAN.png" alt=""></span><h3>Hacim</h3><p>ENK ve prizma yöntemleriyle hacim hesaplama.</p>
+            <div class="panel-commands"><span><img src="assets/icons/TOPOGRAFYA_HACIM_ENK.png" alt="">ENK Yöntemi</span><span><img src="assets/icons/TOPOGRAFYA_HACIM_PRIZMA.png" alt="">Prizma Yöntemi</span><span><img src="assets/icons/SC23_LAST_ENK_AREAS.png" alt="">Son ENK Alanları</span><span><img src="assets/icons/SC23_PRISM_SOLID.png" alt="">Prizma Katı Model</span></div>
+          </article>
+          <article class="feature-card main-button-card"><span class="panel-label">Projeksiyon</span><span class="feature-icon image-icon"><img src="assets/icons/DONUSUM.png" alt=""></span><h3>Koordinat Dönüşüm</h3><p>Koordinat sistemleri arası dönüşüm işlemleri.</p><div class="panel-commands"><span><img src="assets/icons/DONUSUM.png" alt="">Dönüşüm</span></div></article>
+          <article class="feature-card main-button-card"><span class="panel-label">Projeksiyon</span><span class="feature-icon image-icon"><img src="assets/icons/ONDULASYON_HESAPLA.png" alt=""></span><h3>Ondülasyon</h3><p>Yükseklik ve ondülasyon hesap akışları.</p><div class="panel-commands"><span><img src="assets/icons/ONDULASYON_HESAPLA.png" alt="">Hesapla</span><span><img src="assets/icons/ONDULASYON_UYGULA.png" alt="">Uygula</span><span><img src="assets/icons/ONDULASYON_Z.png" alt="">Z Değeri</span></div></article>
+          <article class="feature-card main-button-card"><span class="panel-label">Projeksiyon</span><span class="feature-icon image-icon"><img src="assets/icons/ENLEMBOYLAM.png" alt=""></span><h3>Enlem/Boylam Yazdır</h3><p>Seçili verileri enlem boylam formatında dışa aktarır.</p><div class="panel-commands"><span><img src="assets/icons/ENLEMBOYLAM.png" alt="">Enlem/Boylam Yazdır</span></div></article>
+          <article class="feature-card main-button-card"><span class="panel-label">Projeksiyon</span><span class="feature-icon image-icon"><img src="assets/icons/QIBLAH.png" alt=""></span><h3>QIBLAH</h3><p>Çizim üzerinde yön bilgisi üretim aracı.</p><div class="panel-commands"><span><img src="assets/icons/QIBLAH.png" alt="">QIBLAH</span><span><img src="assets/icons/QIBLAH_GUNCELLE.png" alt="">Güncelle</span></div></article>
+          <article class="feature-card main-button-card"><span class="panel-label">Google Earth</span><span class="feature-icon image-icon"><img src="assets/icons/GLOBE.png" alt=""></span><h3>Projeksiyon</h3><p>Google Earth aktarımı için koordinat ayarı.</p><div class="panel-commands"><span><img src="assets/icons/GLOBE.png" alt="">Projeksiyon</span></div></article>
+          <article class="feature-card main-button-card"><span class="panel-label">Google Earth</span><span class="feature-icon image-icon"><img src="assets/icons/GEEXPORT.png" alt=""></span><h3>Export</h3><p>Seçili çizim verilerini KML/KMZ olarak aktarır.</p><div class="panel-commands"><span><img src="assets/icons/GEEXPORT.png" alt="">Google Earth Export</span></div></article>
+          <article class="feature-card main-button-card"><span class="panel-label">Google Earth</span><span class="feature-icon image-icon"><img src="assets/icons/GEIMPORT.png" alt=""></span><h3>Import</h3><p>KML/KMZ dosyalarını CAD çizimine taşır.</p><div class="panel-commands"><span><img src="assets/icons/GEIMPORT.png" alt="">Google Earth Import</span></div></article>
+          <article class="feature-card main-button-card"><span class="panel-label">Araçlar</span><span class="feature-icon image-icon"><img src="assets/icons/SCREEN_MANAGER.png" alt=""></span><h3>Ekran Yöneticisi</h3><p>Tabaka ve obje görünürlüklerini yönetir.</p><div class="panel-commands"><span><img src="assets/icons/SCREEN_MANAGER.png" alt="">Ekran Yöneticisi</span></div></article>
+          <article class="feature-card main-button-card"><span class="panel-label">Araçlar</span><span class="feature-icon image-icon"><img src="assets/icons/SC23_DWG_EXPORT.png" alt=""></span><h3>DWG Export</h3><p>Model verilerini düzenli DWG çıktısına hazırlar.</p><div class="panel-commands"><span><img src="assets/icons/SC23_DWG_EXPORT.png" alt="">DWG Export</span></div></article>
+          <article class="feature-card main-button-card"><span class="panel-label">Araçlar</span><span class="feature-icon image-icon"><img src="assets/icons/SC23_UPDATE_CHECK.png" alt=""></span><h3>Güncelle</h3><p>Sürüm kontrolü ve güncel yapı takibi.</p><div class="panel-commands"><span><img src="assets/icons/SC23_UPDATE_CHECK.png" alt="">Güncelle</span></div></article>
+        </div>
+      </section>
+
+      <section id="salih" class="section profile-section">
+        <figure class="profile-photo-window" aria-label="Salih CENGİZ saha ve profil fotoğrafları">
+          <img class="profile-slide active" src="assets/profile-slide-1.jpg" alt="Salih CENGİZ saha ölçümü">
+          <img class="profile-slide" src="assets/profile-slide-2.jpeg" alt="Salih CENGİZ inşaat sahasında ölçüm">
+          <img class="profile-slide" src="assets/profile-generated-1.jpg?v=20260520-2" alt="Salih CENGİZ saha hesap kontrolü">
+          <img class="profile-slide" src="assets/profile-generated-2.jpg?v=20260520-2" alt="Salih CENGİZ geniş saha ölçümü">
+        </figure>
+        <div class="profile-copy">
+          <h2>Salih CENGİZ</h2>
+          <p class="profile-title">Harita ve Kadastro Teknikeri</p>
+          <p>
+            Saha ölçüsünden ofis çizimine uzanan üretim sürecinde; nokta, kot, koordinat, yüzey ve çizim kontrollerini düzenli bir iş akışına dönüştüren teknik bir yaklaşım. SC23 Harita, harita ve inşaat projelerinde CAD üzerinde tekrar eden işlemleri tek panelde toplayarak saha-ofis bağlantısını daha hızlı, okunabilir ve profesyonel hale getirir.
+          </p>
+        </div>
+        <div class="profile-stats" aria-label="Ozet bilgiler">
+          <div><strong>SC23</strong><span>Harita yazılım markası</span></div>
+          <div><strong>1.0.0</strong><span>Müşteri sürümü</span></div>
+          <div><strong>CAD</strong><span>Ribbon panel uyumu</span></div>
+        </div>
+      </section>
+
+      <section class="section seo-section" aria-label="SC23 Harita uzmanlık alanları">
+        <div class="section-heading feature-title">
+          <p class="eyebrow">Uzmanlık alanları</p>
+          <h2>CAD tabanlı harita, inşaat ve topoğrafya iş akışları.</h2>
+          <p>
+            SC23 Harita; AutoCAD, Civil 3D ve Netcad çevresindeki harita işleri için ölçümden çizime uzanan pratik bir yardımcı eklenti yaklaşımı sunar. Enkesit, yüzey oluşturma, güzergah, hacim, kübaj, aplikasyon, alım, ölçüm ve Google Earth aktarımı gibi saha-ofis süreçlerini düzenli bir ribbon menüsü altında toplar.
+          </p>
+        </div>
+      </section>
+
+      <section class="section roadmap-section">
+        <div class="section-heading compact">
+          <p class="eyebrow">Gelecek sürümler</p>
+          <h2>Yeni modüller ve başka programlar için ürün vitrini.</h2>
+        </div>
+        <div class="roadmap">
+          <a
+            class="roadmap-card active"
+            href="https://llarwagbefhnrpnmrvfu.supabase.co/storage/v1/object/public/sc23-downloads/SC23_Harita.rar"
+            data-publisher="Salih CENGİZ"
+            data-version="1.0.0 Müşteri Sürümü"
+            data-file="SC23_Harita.rar"
+            data-sha256="016B93C04BD6599C37A3F29184CCCAFBE9D861A871AA4E1EA645F74793B98327"
+          >
+            <span>01</span><strong>SC23 Harita CAD eklentisi</strong><small class="download-note">Resmi kurulum dosyası güvenli bağlantı üzerinden sunulur.</small><em>İndir</em>
+          </a>
+          <div class="roadmap-card"><span>02</span><strong>Yeni sürümler</strong><p>Yakında.</p><em>Yakında</em></div>
+          <div class="roadmap-card"><span>03</span><strong>Yeni programlar</strong><p>Yakında.</p><em>Yakında</em></div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 Salih CENGİZ. Tüm hakları saklıdır.</span>
+    </footer>
+
+    <script src="script.js"></script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"6543356c17434ef98e47115e965a4972"}'></script>
+  </body>
+</html>
+
