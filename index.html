@@ -1067,6 +1067,30 @@ h3 {
   line-height: 1.35;
 }
 
+.compact-security {
+  display: block;
+  max-width: 1180px;
+  padding: 14px 18px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.compact-security span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.compact-security span::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold-2);
+  box-shadow: 0 0 18px rgba(214, 178, 61, 0.55);
+}
+
 .contact-section {
   display: flex;
   align-items: center;
@@ -1702,20 +1726,15 @@ h3 {
           <div class="roadmap-card"><span>02</span><strong>Yeni sürümler</strong><p>Yakında.</p><em>Yakında</em></div>
           <div class="roadmap-card"><span>03</span><strong>Yeni programlar</strong><p>Yakında.</p><em>Yakında</em></div>
         </div>
-        <div class="download-security" aria-label="Dosya doğrulama bilgileri">
-          <div>
-            <p class="eyebrow">Güvenli indirme bilgisi</p>
-            <h3>SC23 Harita dosya doğrulama</h3>
-            <p>
-              Program dosyası Supabase Storage üzerinden yayınlanır. İndirme sonrası dosya adı, sürüm ve SHA256 doğrulama kodu kontrol edilebilir.
-            </p>
-          </div>
-          <dl>
-            <div><dt>Yayıncı</dt><dd>Salih CENGİZ</dd></div>
-            <div><dt>Sürüm</dt><dd>1.0.0 Müşteri Sürümü</dd></div>
-            <div><dt>Dosya</dt><dd>SC23_Harita.exe</dd></div>
-            <div class="hash-row"><dt>SHA256</dt><dd>E92DE52AE3DBFD6EB58F6465659E84980F44BC16BC6BA4BBB59154DEA0595FD4</dd></div>
-          </dl>
+        <div
+          class="download-security compact-security"
+          aria-label="Güvenli indirme bilgisi"
+          data-publisher="Salih CENGİZ"
+          data-version="1.0.0 Müşteri Sürümü"
+          data-file="SC23_Harita.exe"
+          data-sha256="E92DE52AE3DBFD6EB58F6465659E84980F44BC16BC6BA4BBB59154DEA0595FD4"
+        >
+          <span>Resmi kurulum dosyası güvenli bağlantı üzerinden sunulur.</span>
         </div>
       </section>
 
