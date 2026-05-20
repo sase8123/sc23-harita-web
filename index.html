@@ -1008,6 +1008,65 @@ h3 {
   text-transform: uppercase;
 }
 
+.download-security {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.3fr);
+  gap: 28px;
+  max-width: 1180px;
+  margin: 22px auto 0;
+  padding: 24px;
+  border: 1px solid rgba(240, 215, 107, 0.18);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(214, 178, 61, 0.12), rgba(255, 255, 255, 0.04));
+}
+
+.download-security h3 {
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+
+.download-security p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.download-security dl {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+
+.download-security dl div {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background: rgba(7, 17, 16, 0.42);
+}
+
+.download-security dt {
+  color: var(--gold-2);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.download-security dd {
+  margin: 0;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.download-security .hash-row dd {
+  overflow-wrap: anywhere;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
 .contact-section {
   display: flex;
   align-items: center;
@@ -1412,7 +1471,8 @@ h3 {
   .feature-grid,
   .field-grid,
   .command-grid,
-  .roadmap {
+  .roadmap,
+  .download-security {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1462,7 +1522,12 @@ h3 {
   .feature-grid,
   .field-grid,
   .command-grid,
-  .roadmap {
+  .roadmap,
+  .download-security {
+    grid-template-columns: 1fr;
+  }
+
+  .download-security dl div {
     grid-template-columns: 1fr;
   }
 
@@ -1636,6 +1701,21 @@ h3 {
           <a class="roadmap-card active" href="https://llarwagbefhnrpnmrvfu.supabase.co/storage/v1/object/public/sc23-downloads/SC23_Harita.exe"><span>01</span><strong>SC23 Harita CAD eklentisi</strong><em>İndir</em></a>
           <div class="roadmap-card"><span>02</span><strong>Yeni sürümler</strong><p>Yakında.</p><em>Yakında</em></div>
           <div class="roadmap-card"><span>03</span><strong>Yeni programlar</strong><p>Yakında.</p><em>Yakında</em></div>
+        </div>
+        <div class="download-security" aria-label="Dosya doğrulama bilgileri">
+          <div>
+            <p class="eyebrow">Güvenli indirme bilgisi</p>
+            <h3>SC23 Harita dosya doğrulama</h3>
+            <p>
+              Program dosyası Supabase Storage üzerinden yayınlanır. İndirme sonrası dosya adı, sürüm ve SHA256 doğrulama kodu kontrol edilebilir.
+            </p>
+          </div>
+          <dl>
+            <div><dt>Yayıncı</dt><dd>Salih CENGİZ</dd></div>
+            <div><dt>Sürüm</dt><dd>1.0.0 Müşteri Sürümü</dd></div>
+            <div><dt>Dosya</dt><dd>SC23_Harita.exe</dd></div>
+            <div class="hash-row"><dt>SHA256</dt><dd>E92DE52AE3DBFD6EB58F6465659E84980F44BC16BC6BA4BBB59154DEA0595FD4</dd></div>
+          </dl>
         </div>
       </section>
 
