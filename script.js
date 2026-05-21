@@ -171,7 +171,7 @@ document.querySelectorAll(".command-chip").forEach((chip) => {
   });
 });
 
-document.querySelectorAll('a[href*="SC23_Harita."]').forEach((link) => {
+document.querySelectorAll('a[href*="SC23_Harita"], a[href*="sc23-downloads"]').forEach((link) => {
   link.addEventListener("click", (event) => {
     const href = link.href;
     const target = link.target;
