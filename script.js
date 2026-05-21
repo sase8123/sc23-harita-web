@@ -30,23 +30,42 @@ const getReturningVisitorStatus = () => {
 };
 
 const returningVisitor = getReturningVisitorStatus();
+let visitorLocationPromise;
 
-const recordSiteEvent = (eventType) => {
-  if (!analyticsConfig.supabaseUrl || !analyticsConfig.publishableKey) {
-    return;
+const getVisitorLocation = () => {
+  if (!visitorLocationPromise) {
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 2500);
+
+    visitorLocationPromise = fetch("https://ipapi.co/json/", {
+      signal: controller.signal,
+      cache: "no-store"
+    })
+      .then((response) => (response.ok ? response.json() : null))
+      .then((data) => {
+        if (!data || data.error) return {};
+        return {
+          ip_address: data.ip || null,
+          city: data.city || null,
+          region: data.region || null,
+          country: data.country_name || null,
+          country_code: data.country_code || null,
+          timezone: data.timezone || null,
+          latitude: typeof data.latitude === "number" ? data.latitude : null,
+          longitude: typeof data.longitude === "number" ? data.longitude : null
+        };
+      })
+      .catch(() => ({}))
+      .finally(() => window.clearTimeout(timeout));
   }
 
-  const endpoint = `${analyticsConfig.supabaseUrl}/rest/v1/site_events`;
-  const payload = {
-    event_type: eventType,
-    page: window.location.href,
-    user_agent: navigator.userAgent,
-    device_type: getDeviceType(),
-    operating_system: getOperatingSystem(),
-    returning_visitor: returningVisitor
-  };
+  return visitorLocationPromise;
+};
 
-  fetch(endpoint, {
+const postSiteEvent = (payload) => {
+  const endpoint = `${analyticsConfig.supabaseUrl}/rest/v1/site_events`;
+
+  return fetch(endpoint, {
     method: "POST",
     headers: {
       apikey: analyticsConfig.publishableKey,
@@ -56,7 +75,36 @@ const recordSiteEvent = (eventType) => {
     },
     body: JSON.stringify(payload),
     keepalive: true
-  }).catch(() => {});
+  });
+};
+
+const buildBaseEventPayload = (eventType) => ({
+  event_type: eventType,
+  page: window.location.href,
+  user_agent: navigator.userAgent,
+  device_type: getDeviceType(),
+  operating_system: getOperatingSystem(),
+  returning_visitor: returningVisitor
+});
+
+const recordSiteEvent = (eventType) => {
+  if (!analyticsConfig.supabaseUrl || !analyticsConfig.publishableKey) {
+    return;
+  }
+
+  const basePayload = buildBaseEventPayload(eventType);
+
+  getVisitorLocation()
+    .then((location) => postSiteEvent({ ...basePayload, ...location }))
+    .then((response) => {
+      if (!response.ok) {
+        return postSiteEvent(basePayload);
+      }
+      return null;
+    })
+    .catch(() => {
+      postSiteEvent(basePayload).catch(() => {});
+    });
 };
 
 recordSiteEvent("page_view");
