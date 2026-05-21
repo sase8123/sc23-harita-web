@@ -1,4 +1,4 @@
-const ticker = document.querySelector("[data-ticker]");
+﻿const ticker = document.querySelector("[data-ticker]");
 
 const analyticsConfig = {
   supabaseUrl: "https://llarwagbefhnrpnmrvfu.supabase.co",
