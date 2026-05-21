@@ -31,6 +31,7 @@ const getReturningVisitorStatus = () => {
 
 const returningVisitor = getReturningVisitorStatus();
 let visitorLocationPromise;
+let visitorLocationCache = {};
 
 const getVisitorLocation = () => {
   if (!visitorLocationPromise) {
@@ -44,7 +45,7 @@ const getVisitorLocation = () => {
       .then((response) => (response.ok ? response.json() : null))
       .then((data) => {
         if (!data || data.error) return {};
-        return {
+        visitorLocationCache = {
           ip_address: data.ip || null,
           city: data.city || null,
           region: data.region || null,
@@ -54,6 +55,7 @@ const getVisitorLocation = () => {
           latitude: typeof data.latitude === "number" ? data.latitude : null,
           longitude: typeof data.longitude === "number" ? data.longitude : null
         };
+        return visitorLocationCache;
       })
       .catch(() => ({}))
       .finally(() => window.clearTimeout(timeout));
@@ -105,6 +107,17 @@ const recordSiteEvent = (eventType) => {
     .catch(() => {
       postSiteEvent(basePayload).catch(() => {});
     });
+};
+
+const recordDownloadClick = () => {
+  if (!analyticsConfig.supabaseUrl || !analyticsConfig.publishableKey) {
+    return Promise.resolve();
+  }
+
+  const basePayload = buildBaseEventPayload("download_click");
+  const payload = { ...basePayload, ...visitorLocationCache };
+
+  return postSiteEvent(payload).catch(() => {});
 };
 
 recordSiteEvent("page_view");
@@ -159,7 +172,24 @@ document.querySelectorAll(".command-chip").forEach((chip) => {
 });
 
 document.querySelectorAll('a[href*="SC23_Harita."]').forEach((link) => {
-  link.addEventListener("click", () => {
-    recordSiteEvent("download_click");
+  link.addEventListener("click", (event) => {
+    const href = link.href;
+    const target = link.target;
+
+    if (!href || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || target === "_blank") {
+      recordDownloadClick();
+      return;
+    }
+
+    event.preventDefault();
+    let opened = false;
+    const openDownload = () => {
+      if (opened) return;
+      opened = true;
+      window.location.href = href;
+    };
+
+    recordDownloadClick().finally(openDownload);
+    window.setTimeout(openDownload, 450);
   });
 });
