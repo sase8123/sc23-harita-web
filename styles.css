@@ -3079,3 +3079,112 @@ img {
     margin-top: calc(62vh - 218px) !important;
   }
 }
+/* Mobile header and hero exact placement */
+@media (max-width: 760px) {
+  .site-header {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 14px !important;
+    padding: 16px 14px !important;
+  }
+
+  .brand {
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+  }
+
+  .brand img {
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 10px !important;
+  }
+
+  .brand strong {
+    font-size: 17px !important;
+    line-height: 1.05 !important;
+  }
+
+  .brand small {
+    font-size: 13px !important;
+    line-height: 1.1 !important;
+  }
+
+  .nav-action {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-height: 34px !important;
+    padding: 8px 16px !important;
+    border-radius: 8px !important;
+    font-size: 13px !important;
+    box-shadow: 0 10px 24px rgba(214, 178, 61, 0.18) !important;
+  }
+
+  .hero-background-gallery {
+    height: 64vh !important;
+    min-height: 470px !important;
+  }
+
+  .hero-background-gallery .hero-slide {
+    object-position: 100% top !important;
+    filter: saturate(1.06) contrast(1.03) brightness(1) !important;
+  }
+
+  .hero-premium-stage::before {
+    height: 64vh !important;
+    min-height: 470px !important;
+    background:
+      linear-gradient(90deg, rgba(4, 12, 11, 0.10) 0%, rgba(4, 12, 11, 0.02) 58%, rgba(4, 12, 11, 0.06) 100%),
+      linear-gradient(180deg, rgba(4, 12, 11, 0.04) 0%, rgba(4, 12, 11, 0.06) 52%, rgba(4, 12, 11, 0.26) 100%) !important;
+  }
+
+  .hero-immersive-content {
+    padding: 22px 14px 18px !important;
+  }
+
+  .hero-product-card {
+    width: min(100%, 305px) !important;
+    padding: 9px 10px !important;
+    gap: 9px !important;
+    background: rgba(7, 18, 16, 0.24) !important;
+    border-color: rgba(240, 215, 107, 0.16) !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16) !important;
+    backdrop-filter: blur(10px) saturate(1.08) !important;
+  }
+
+  .hero-product-card img {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  .hero-product-copy strong {
+    font-size: 25px !important;
+  }
+
+  .hero-product-copy span {
+    font-size: 13px !important;
+  }
+
+  .hero-product-copy small {
+    font-size: 11px !important;
+  }
+
+  .hero-brand-block .hero-actions {
+    width: min(100%, 305px) !important;
+    margin-top: 10px !important;
+  }
+
+  .hero-actions .primary-button,
+  .hero-actions .secondary-button {
+    min-height: 36px !important;
+    padding: 8px 8px !important;
+    font-size: 12.5px !important;
+  }
+
+  .hero-brand-block .lead {
+    margin-top: calc(64vh - 126px) !important;
+    background: rgba(6, 18, 17, 0.86) !important;
+  }
+}
