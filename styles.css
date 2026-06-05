@@ -2417,6 +2417,7 @@ body {
   gap: 5px;
 }
 
+.hero-product-copy h1,
 .hero-product-copy strong {
   color: #f5f2e8;
   font-size: clamp(24px, 2.7vw, 40px);
@@ -2630,6 +2631,7 @@ img {
     height: 50px !important;
   }
 
+  .hero-product-copy h1,
   .hero-product-copy strong {
     font-size: 26px !important;
   }
@@ -2987,6 +2989,7 @@ img {
     border-radius: 9px !important;
   }
 
+  .hero-product-copy h1,
   .hero-product-copy strong {
     font-size: 27px !important;
     line-height: 1 !important;
@@ -3159,6 +3162,7 @@ img {
     height: 38px !important;
   }
 
+  .hero-product-copy h1,
   .hero-product-copy strong {
     font-size: 25px !important;
   }
@@ -3241,6 +3245,7 @@ img {
     border-radius: 8px !important;
   }
 
+  .hero-product-copy h1,
   .hero-product-copy strong {
     font-size: 24px !important;
     line-height: 1 !important;
@@ -3276,3 +3281,8 @@ img {
   white-space: nowrap !important;
   border: 0 !important;
 }
+
+
+
+
+
