@@ -3286,3 +3286,74 @@ img {
 
 
 
+
+/* Profile detail page name sizing */
+.profile-detail-page .profile-copy h1 {
+  margin: 0;
+  color: var(--paper);
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.05;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .profile-detail-page .profile-copy h1 {
+    font-size: 30px !important;
+    line-height: 1.05 !important;
+  }
+}
+
+/* Mobile profile detail page layout */
+@media (max-width: 760px) {
+  .profile-detail-page {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    min-height: auto !important;
+    padding: 92px 14px 34px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .profile-detail-page .profile-photo-window {
+    width: min(100%, 320px) !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+    aspect-ratio: 4 / 5 !important;
+  }
+
+  .profile-detail-page .profile-copy {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: left !important;
+  }
+
+  .profile-detail-page .profile-copy h1 {
+    font-size: 28px !important;
+    line-height: 1.08 !important;
+    white-space: nowrap !important;
+  }
+
+  .profile-detail-page .profile-title {
+    font-size: 14px !important;
+    line-height: 1.35 !important;
+  }
+
+  .profile-detail-page .profile-copy p:not(.profile-title) {
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+  }
+
+  .profile-detail-page .profile-stats {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  .profile-detail-page .profile-stats div {
+    min-height: 72px !important;
+    padding: 14px !important;
+  }
+}
