@@ -3356,4 +3356,11 @@ img {
     min-height: 72px !important;
     padding: 14px !important;
   }
+
+  .profile-detail-page .profile-stats strong {
+    font-size: 26px !important;
+    line-height: 1.05 !important;
+    white-space: nowrap !important;
+  }
 }
+
