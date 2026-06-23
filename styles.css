@@ -2764,8 +2764,8 @@ img {
   position: absolute !important;
   right: clamp(14px, 4vw, 32px) !important;
   bottom: 50% !important;
-  width: 30px !important;
-  height: 30px !important;
+  width: 33px !important;
+  height: 33px !important;
   border-radius: 6px !important;
   transform: translateY(50%) !important;
 }
@@ -2886,7 +2886,7 @@ img {
   .roadmap em {
     left: 16px !important;
     bottom: 16px !important;
-    font-size: 13px !important;
+    font-size: 14px !important;
   }
 
   .site-footer {
@@ -2913,8 +2913,8 @@ img {
     right: 16px !important;
     top: 50% !important;
     bottom: auto !important;
-    width: 30px !important;
-    height: 30px !important;
+    width: 33px !important;
+    height: 33px !important;
     border-radius: 7px !important;
     transform: translateY(-50%) !important;
   }
@@ -3025,7 +3025,7 @@ img {
     min-height: 36px !important;
     padding: 8px 9px !important;
     justify-content: center !important;
-    font-size: 13px !important;
+    font-size: 14px !important;
     border-radius: 8px !important;
   }
 
@@ -3183,7 +3183,7 @@ img {
   }
 
   .hero-product-copy span {
-    font-size: 13px !important;
+    font-size: 14px !important;
   }
 
   .hero-product-copy small {
@@ -3229,7 +3229,7 @@ img {
 
   .hero-actions .primary-button {
     min-height: 38px !important;
-    font-size: 13px !important;
+    font-size: 14px !important;
   }
 
   .hero-actions .secondary-button {
@@ -3382,10 +3382,10 @@ img {
 @media (max-width: 760px) {
   .site-header {
     display: grid !important;
-    grid-template-columns: minmax(86px, 1fr) max-content !important;
+    grid-template-columns: minmax(100px, 1fr) max-content !important;
     align-items: center !important;
-    gap: 6px !important;
-    padding: 10px 8px !important;
+    gap: 8px !important;
+    padding: 11px 10px !important;
   }
 
   .brand {
@@ -3394,12 +3394,12 @@ img {
   }
 
   .brand img {
-    width: 30px !important;
-    height: 30px !important;
+    width: 33px !important;
+    height: 33px !important;
   }
 
   .brand strong {
-    font-size: 13px !important;
+    font-size: 14px !important;
   }
 
   .brand small {
@@ -3415,7 +3415,7 @@ img {
     gap: 3px !important;
     width: auto !important;
     min-width: 0 !important;
-    max-width: calc(100vw - 112px) !important;
+    max-width: calc(100vw - 124px) !important;
   }
 
   .nav-action {
@@ -3423,10 +3423,10 @@ img {
     flex: 0 1 auto !important;
     width: auto !important;
     min-width: 0 !important;
-    min-height: 24px !important;
-    padding: 5px 5px !important;
+    min-height: 28px !important;
+    padding: 6px 7px !important;
     border-radius: 6px !important;
-    font-size: 9px !important;
+    font-size: 10px !important;
     line-height: 1 !important;
     white-space: nowrap !important;
   }
