@@ -3745,3 +3745,7 @@ img {
     height: 38px;
   }
 }
+/* Hide profile summary windows */
+.profile-return-section .profile-stats {
+  display: none !important;
+}
