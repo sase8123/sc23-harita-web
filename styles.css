@@ -3494,3 +3494,88 @@ img {
     border-radius: 6px !important;
   }
 }
+/* Hero product compact final */
+.hero-product-window-stack {
+  width: max-content !important;
+  max-width: none !important;
+  gap: 8px !important;
+}
+
+.hero-product-window-stack .hero-product-card {
+  width: max-content !important;
+  max-width: max-content !important;
+  min-width: 0 !important;
+  padding: 10px 12px !important;
+  gap: 10px !important;
+  border-color: rgba(255, 255, 255, 0.06) !important;
+  background: rgba(5, 14, 13, 0.055) !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.025) !important;
+  backdrop-filter: blur(3px) !important;
+}
+
+.hero-product-window-stack .hero-product-card img {
+  width: 52px !important;
+  height: 52px !important;
+}
+
+.hero-product-window-stack .hero-product-copy {
+  width: max-content !important;
+  min-width: 0 !important;
+  gap: 4px !important;
+}
+
+.hero-product-window-stack .hero-product-copy .release-pill {
+  width: 52px !important;
+  min-height: 24px !important;
+  padding: 3px 5px !important;
+  border-color: rgba(126, 205, 222, 0.12) !important;
+  background: rgba(126, 205, 222, 0.035) !important;
+  font-size: 10px !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+
+.hero-product-window-stack .hero-product-copy small {
+  font-size: 11px !important;
+  line-height: 1.1 !important;
+  color: rgba(245, 242, 232, 0.58) !important;
+}
+
+.hero-product-window-stack .hero-earth-card {
+  border-color: rgba(101, 204, 172, 0.09) !important;
+  background: rgba(6, 18, 17, 0.06) !important;
+}
+
+.hero-product-window-stack .hero-earth-card .release-pill {
+  border-color: rgba(101, 204, 172, 0.13) !important;
+  background: rgba(101, 204, 172, 0.04) !important;
+}
+
+@media (max-width: 760px) {
+  .hero-product-window-stack {
+    width: max-content !important;
+    max-width: calc(100vw - 28px) !important;
+  }
+
+  .hero-product-window-stack .hero-product-card {
+    width: max-content !important;
+    max-width: calc(100vw - 28px) !important;
+    padding: 8px 9px !important;
+    gap: 8px !important;
+  }
+
+  .hero-product-window-stack .hero-product-card img {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  .hero-product-window-stack .hero-product-copy .release-pill {
+    width: 42px !important;
+    min-height: 22px !important;
+    font-size: 8.5px !important;
+  }
+
+  .hero-product-window-stack .hero-product-copy small {
+    font-size: 9.5px !important;
+  }
+}
