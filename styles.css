@@ -3749,3 +3749,19 @@ img {
 .profile-return-section .profile-stats {
   display: none !important;
 }
+/* Mobile hero lead lift only */
+@media (max-width: 760px) {
+  .hero-brand-block .lead {
+    margin-top: calc(64vh - 145px) !important;
+  }
+
+  .hero-brand-block .hero-actions {
+    margin-top: 8px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-brand-block .lead {
+    margin-top: calc(64vh - 158px) !important;
+  }
+}
