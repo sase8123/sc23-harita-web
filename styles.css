@@ -3751,27 +3751,55 @@ img {
     height: 38px;
   }
 }
-/* Mobile hero minimal button visibility fix */
+/* Mobile hero final: keep buttons visible on first screen */
 @media (max-width: 760px) {
+  .hero-immersive-content {
+    padding-top: 70px !important;
+  }
+
+  .hero-product-window-stack {
+    margin-bottom: 8px !important;
+  }
+
   .hero-brand-block .lead {
-    margin-top: calc(64vh - 150px) !important;
-    max-height: 34svh !important;
+    width: min(100%, 305px) !important;
+    margin: 0 !important;
+    max-height: 30svh !important;
+    padding: 10px 12px !important;
     overflow: hidden !important;
+    font-size: 12px !important;
+    line-height: 1.34 !important;
   }
 
   .hero-brand-block .hero-actions {
+    width: min(100%, 305px) !important;
     margin-top: 8px !important;
+    grid-template-columns: minmax(0, 1.25fr) minmax(78px, 0.75fr) !important;
+    gap: 7px !important;
   }
 
   .hero-actions .primary-button,
   .hero-actions .secondary-button {
-    min-height: 36px !important;
+    min-height: 34px !important;
+    padding: 7px 8px !important;
+    font-size: 12px !important;
   }
 }
 
 @media (max-width: 380px) {
+  .hero-immersive-content {
+    padding-top: 64px !important;
+  }
+
   .hero-brand-block .lead {
-    margin-top: calc(64vh - 166px) !important;
-    max-height: 31svh !important;
+    max-height: 27svh !important;
+    font-size: 11px !important;
+    line-height: 1.28 !important;
+  }
+
+  .hero-actions .primary-button,
+  .hero-actions .secondary-button {
+    min-height: 31px !important;
+    font-size: 11.2px !important;
   }
 }
