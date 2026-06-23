@@ -3727,3 +3727,9 @@ img {
     font-size: 11.5px !important;
   }
 }
+/* Mobile hero crane focus */
+@media (max-width: 760px) {
+  .hero-background-gallery .hero-slide {
+    object-position: right top !important;
+  }
+}
