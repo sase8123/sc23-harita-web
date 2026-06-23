@@ -2724,7 +2724,7 @@ img {
 .hero-product-card,
 .hero-brand-block .lead {
   background: rgba(6, 18, 17, 0.54) !important;
-  backdrop-filter: blur(8px) !important;
+  backdrop-filter: blur(5px) !important;
 }
 
 @media (max-width: 760px) {
@@ -3247,7 +3247,7 @@ img {
     background: rgba(7, 18, 16, 0.18) !important;
     border-color: rgba(240, 215, 107, 0.26) !important;
     color: rgba(245, 242, 232, 0.9) !important;
-    backdrop-filter: blur(8px) !important;
+    backdrop-filter: blur(5px) !important;
   }
 }
 /* Mobile hero product glass final polish */
@@ -3449,10 +3449,10 @@ img {
 }
 
 .hero-product-window-stack .hero-product-card {
-  border-color: rgba(255, 255, 255, 0.14) !important;
-  background: rgba(5, 14, 13, 0.22) !important;
-  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
-  backdrop-filter: blur(8px) !important;
+  border-color: rgba(255, 255, 255, 0.09) !important;
+  background: rgba(5, 14, 13, 0.10) !important;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.04) !important;
+  backdrop-filter: blur(5px) !important;
 }
 
 .hero-product-copy .release-pill {
@@ -3462,10 +3462,10 @@ img {
   width: 58px !important;
   min-height: 34px;
   padding: 4px 5px;
-  border: 1px solid rgba(126, 205, 222, 0.26);
+  border: 1px solid rgba(126, 205, 222, 0.16);
   border-radius: 7px;
   color: #e7fbff !important;
-  background: rgba(126, 205, 222, 0.11);
+  background: rgba(126, 205, 222, 0.055);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
   font-size: 10px;
   font-weight: 900;
@@ -3475,14 +3475,14 @@ img {
 }
 
 .hero-earth-card {
-  border-color: rgba(101, 204, 172, 0.22) !important;
-  background: rgba(6, 18, 17, 0.24) !important;
+  border-color: rgba(101, 204, 172, 0.13) !important;
+  background: rgba(6, 18, 17, 0.11) !important;
 }
 
 .hero-earth-card .release-pill {
-  border-color: rgba(101, 204, 172, 0.28);
+  border-color: rgba(101, 204, 172, 0.17);
   color: #edfff8 !important;
-  background: rgba(101, 204, 172, 0.12);
+  background: rgba(101, 204, 172, 0.06);
 }
 
 @media (max-width: 760px) {
