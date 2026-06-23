@@ -3765,3 +3765,10 @@ img {
     margin-top: calc(64vh - 158px) !important;
   }
 }
+/* Force Earth release download button gold */
+.earth-release-card .release-download {
+  color: #10140f !important;
+  background: linear-gradient(135deg, var(--gold-2), var(--gold)) !important;
+  border: 1px solid transparent !important;
+  box-shadow: 0 12px 28px rgba(214, 178, 61, 0.18) !important;
+}
