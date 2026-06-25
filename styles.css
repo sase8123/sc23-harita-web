@@ -3794,4 +3794,62 @@ img {
   background: linear-gradient(135deg, var(--gold-2), var(--gold)) !important;
   border: 1px solid transparent !important;
 }
+/* Mobile hero final fit after Kot card */
+@media (max-width: 760px) {
+  .hero-product-window-stack {
+    gap: 5px !important;
+  }
+
+  .hero-product-window-stack .hero-product-card,
+  .hero-product-card {
+    width: min(100%, 292px) !important;
+    padding: 6px 8px !important;
+    gap: 7px !important;
+  }
+
+  .hero-product-window-stack .hero-product-card img,
+  .hero-product-card img {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 7px !important;
+  }
+
+  .hero-product-window-stack .hero-product-copy h1,
+  .hero-product-copy h1,
+  .hero-product-copy strong {
+    font-size: 19px !important;
+    line-height: 1 !important;
+  }
+
+  .hero-product-window-stack .hero-product-copy .release-pill {
+    min-width: 39px !important;
+    min-height: 18px !important;
+    padding: 2px 5px !important;
+    font-size: 8px !important;
+  }
+
+  .hero-product-window-stack .hero-product-copy small,
+  .hero-product-copy small {
+    font-size: 8.8px !important;
+    line-height: 1.05 !important;
+  }
+
+  .hero-brand-block .lead {
+    margin-top: calc(64vh - 215px) !important;
+    padding: 12px 13px !important;
+    font-size: 13px !important;
+    line-height: 1.42 !important;
+  }
+
+  .hero-brand-block .hero-actions {
+    width: min(100%, 292px) !important;
+    margin-top: 8px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-brand-block .lead {
+    margin-top: calc(64vh - 230px) !important;
+  }
+}
 
