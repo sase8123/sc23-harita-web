@@ -3852,4 +3852,22 @@ img {
     margin-top: calc(64vh - 230px) !important;
   }
 }
+/* Sharper Kot icon display */
+.hero-product-window-stack .hero-kot-card img,
+.kot-release-option img {
+  image-rendering: auto !important;
+  transform: translateZ(0) !important;
+}
+
+@media (max-width: 760px) {
+  .hero-product-window-stack .hero-kot-card img {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .kot-release-option img {
+    width: 42px !important;
+    height: 42px !important;
+  }
+}
 
