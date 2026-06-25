@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --ink: #071110;
   --panel: #101b18;
   --panel-2: #16231f;
@@ -3772,3 +3772,26 @@ img {
   border: 1px solid transparent !important;
   box-shadow: 0 12px 28px rgba(214, 178, 61, 0.18) !important;
 }
+/* SC23 Harita Kot release cards */
+.hero-product-window-stack .hero-kot-card {
+  border-color: rgba(214, 178, 61, 0.08) !important;
+  background: rgba(18, 16, 7, 0.045) !important;
+}
+
+.hero-product-window-stack .hero-kot-card .release-pill {
+  border-color: rgba(214, 178, 61, 0.14) !important;
+  background: rgba(214, 178, 61, 0.04) !important;
+  color: #fff8df !important;
+}
+
+.kot-release-option {
+  border-color: rgba(214, 178, 61, 0.18) !important;
+  background: rgba(214, 178, 61, 0.045) !important;
+}
+
+.kot-release-option .release-download {
+  color: #10140f !important;
+  background: linear-gradient(135deg, var(--gold-2), var(--gold)) !important;
+  border: 1px solid transparent !important;
+}
+
